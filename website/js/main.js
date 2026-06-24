@@ -4,9 +4,8 @@
    EDIT THIS BLOCK ONCE — values propagate across every page.
    ================================================================== */
 window.SITE_CONFIG = {
-  // ⚠️ Replace with your real WhatsApp number in international format,
-  //    digits only (country code + number, no "+", spaces or dashes).
-  whatsapp: "252630000000",
+  // WhatsApp number in international format, digits only (no "+", spaces or dashes).
+  whatsapp: "252634916263",
   // Default pre-filled WhatsApp message.
   whatsappMessage: "Hello Eng. Muhiadin, I'd like to discuss a project (BOQ / takeoff / structural / cost estimation).",
   email: "muxiyadiinali@gmail.com",
