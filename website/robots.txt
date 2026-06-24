@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Update the host below to your final domain.
+Sitemap: https://muhiadinali.is-a.dev/sitemap.xml

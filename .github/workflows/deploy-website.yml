@@ -1,13 +1,13 @@
-name: Deploy Landing Pages
+name: Deploy Website
 
-# Publish the static landing pages to GitHub Pages whenever the
-# landing-pages/ directory changes on main. Can also be run manually.
+# Publish the personal brand website to GitHub Pages whenever the
+# website/ directory changes on main. Can also be run manually.
 on:
   push:
     branches: [main]
     paths:
-      - "landing-pages/**"
-      - ".github/workflows/deploy-landing-pages.yml"
+      - "website/**"
+      - ".github/workflows/deploy-website.yml"
   workflow_dispatch:
 
 # Permissions required by the Pages deployment action.
@@ -31,10 +31,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload landing pages artifact
+      - name: Upload website artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./landing-pages
+          path: ./website
 
   deploy:
     needs: build
