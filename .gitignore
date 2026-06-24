@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build output
+dist/
+build/
+.cache/
+
+# Environment & secrets
+.env
+.env.local
+*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Generated post data
+social-media-management/posts.json

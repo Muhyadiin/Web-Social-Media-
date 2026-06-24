@@ -1,0 +1,48 @@
+name: Deploy Landing Pages
+
+# Publish the static landing pages to GitHub Pages whenever the
+# landing-pages/ directory changes on main. Can also be run manually.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "landing-pages/**"
+      - ".github/workflows/deploy-landing-pages.yml"
+  workflow_dispatch:
+
+# Permissions required by the Pages deployment action.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment; cancel in-progress runs.
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload landing pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./landing-pages
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

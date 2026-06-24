@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="We build high-converting landing pages and manage social media so your brand grows online." />
+  <title>Web &amp; Social Media — Grow Your Brand Online</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#" class="logo">Web<span>&amp;</span>Social</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact" class="btn btn-sm">Get Started</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1 class="hero-title">Landing pages &amp; social media that <span>convert</span>.</h1>
+        <p class="hero-subtitle">
+          We design fast, responsive websites and run data-driven social campaigns
+          so your business reaches the right people — and turns them into customers.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Start a project</a>
+          <a href="#work" class="btn btn-ghost">See our work</a>
+        </div>
+        <dl class="hero-stats">
+          <div><dt>120+</dt><dd>Pages shipped</dd></div>
+          <div><dt>3.4x</dt><dd>Avg. conversion lift</dd></div>
+          <div><dt>98%</dt><dd>Client retention</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 class="section-title">What we do</h2>
+        <p class="section-lead">End-to-end web and social, handled by one team.</p>
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="card-icon">⚡</div>
+            <h3>Landing Pages</h3>
+            <p>High-performance, mobile-first pages built to load fast and convert visitors.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">📈</div>
+            <h3>Social Media Management</h3>
+            <p>Planning, scheduling, and analytics across every major platform.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🎯</div>
+            <h3>Paid Campaigns</h3>
+            <p>Targeted ad creative and budgets optimised for measurable ROI.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section id="work" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Recent work</h2>
+        <p class="section-lead">A few projects we're proud of.</p>
+        <div class="grid grid-3">
+          <article class="work-item"><h3>SaaS Launch</h3><p>Product launch page — +210% sign-ups in week one.</p></article>
+          <article class="work-item"><h3>Local Cafe</h3><p>Instagram growth from 800 to 12k followers in 4 months.</p></article>
+          <article class="work-item"><h3>E-commerce</h3><p>Black Friday page handling 50k visitors with zero downtime.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <h2 class="section-title">Simple pricing</h2>
+        <p class="section-lead">No surprises. Cancel anytime.</p>
+        <div class="grid grid-3">
+          <article class="price-card">
+            <h3>Starter</h3>
+            <p class="price">$499<span>/mo</span></p>
+            <ul><li>1 landing page</li><li>2 social platforms</li><li>Monthly report</li></ul>
+            <a href="#contact" class="btn btn-ghost">Choose Starter</a>
+          </article>
+          <article class="price-card featured">
+            <span class="badge">Most popular</span>
+            <h3>Growth</h3>
+            <p class="price">$999<span>/mo</span></p>
+            <ul><li>3 landing pages</li><li>4 social platforms</li><li>Weekly reports</li><li>Ad management</li></ul>
+            <a href="#contact" class="btn btn-primary">Choose Growth</a>
+          </article>
+          <article class="price-card">
+            <h3>Scale</h3>
+            <p class="price">$1,999<span>/mo</span></p>
+            <ul><li>Unlimited pages</li><li>All platforms</li><li>Dedicated manager</li></ul>
+            <a href="#contact" class="btn btn-ghost">Choose Scale</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / CTA -->
+    <section id="contact" class="cta">
+      <div class="container cta-inner">
+        <h2>Ready to grow?</h2>
+        <p>Tell us about your project and we'll get back within one business day.</p>
+        <form class="contact-form" novalidate>
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+          </div>
+          <textarea name="message" rows="4" placeholder="What are you building?" required></textarea>
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Web &amp; Social Media. All rights reserved.</p>
+      <ul class="social">
+        <li><a href="#" aria-label="Twitter">Twitter</a></li>
+        <li><a href="#" aria-label="Instagram">Instagram</a></li>
+        <li><a href="#" aria-label="LinkedIn">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

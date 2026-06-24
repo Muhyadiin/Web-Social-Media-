@@ -1,0 +1,32 @@
+name: CI
+
+# Lightweight checks on every push and pull request.
+on:
+  push:
+    branches: [main, "landing-pages", "social-media-management"]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate sample posts (social-media-management)
+        run: node social-media-management/scheduler.js
+
+      - name: Check HTML files are non-empty
+        run: |
+          set -e
+          for f in $(find landing-pages -name '*.html'); do
+            if [ ! -s "$f" ]; then
+              echo "Empty HTML file: $f" && exit 1
+            fi
+            echo "OK: $f"
+          done
