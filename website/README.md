@@ -36,7 +36,7 @@ window.SITE_CONFIG = {
   submissions directly in your inbox (recommended).
 
 Then update the domain in `sitemap.xml`, `robots.txt`, and the `canonical` /
-`og:url` tags in each HTML file (currently `https://muhiadinali.is-a.dev`).
+`og:url` tags in each HTML file (currently `https://muhyadiin.github.io/Web-Social-Media-`).
 
 ## Preview locally
 
