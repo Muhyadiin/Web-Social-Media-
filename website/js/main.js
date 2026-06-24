@@ -9,10 +9,9 @@ window.SITE_CONFIG = {
   // Default pre-filled WhatsApp message.
   whatsappMessage: "Hello Eng. Muhiadin, I'd like to discuss a project (BOQ / takeoff / structural / cost estimation).",
   email: "muxiyadiinali@gmail.com",
-  // ⚠️ Optional: paste your Formspree endpoint to receive form submissions by email.
-  //    Get one free at https://formspree.io  (e.g. "https://formspree.io/f/abcdwxyz")
+  // Formspree endpoint — form submissions are emailed to you.
   //    Leave empty ("") to fall back to opening the visitor's email client.
-  formEndpoint: ""
+  formEndpoint: "https://formspree.io/f/mgojoadb"
 };
 
 (function () {
