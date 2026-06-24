@@ -1,81 +1,77 @@
-# Web & Social Media
+# Eng. Muhiadin Ali — Personal Brand & Social Media System
 
-> A monorepo of web development and social media management projects — landing pages, automation tooling, and the documentation that ties them together.
+> **Helping developers, contractors, architects, and property owners make better
+> construction decisions through accurate quantity surveying, structural
+> engineering, and cost consulting.**
 
-[![Deploy Landing Pages](https://github.com/Muhyadiin/Web-Social-Media-/actions/workflows/deploy-landing-pages.yml/badge.svg)](https://github.com/Muhyadiin/Web-Social-Media-/actions/workflows/deploy-landing-pages.yml)
+A complete personal-brand system for a Structural Engineer, Quantity Surveyor and
+Construction Cost Consultant: a fast, SEO-optimized website plus a full social
+media strategy and 30-day content plan — all deployable from this repo.
+
+[![Deploy Website](https://github.com/Muhyadiin/Web-Social-Media-/actions/workflows/deploy-website.yml/badge.svg)](https://github.com/Muhyadiin/Web-Social-Media-/actions/workflows/deploy-website.yml)
 
 ## What's inside
 
-| Project | Description |
-| --- | --- |
-| [`landing-pages/`](./landing-pages) | Responsive marketing landing pages, deployed automatically to GitHub Pages. |
-| [`social-media-management/`](./social-media-management) | A lightweight post scheduler & content planner for social media accounts. |
-| [`docs/`](./docs) | Contribution guidelines, deployment guide, and project documentation. |
+| Area | Path | Description |
+| --- | --- | --- |
+| **Website** | [`website/`](./website) | 6-page responsive site (Home, About, Services, Portfolio, Insights, Contact), SEO-optimized, WhatsApp + email + lead forms. Deploys to GitHub Pages. |
+| **Strategy & design docs** | [`docs/`](./docs) | Sitemap, wireframes, UI design, landing copy, CTA strategy, SEO keywords, implementation plan. |
+| **Social media system** | [`social-media-system/`](./social-media-system) | Platform strategy, content pillars, 30-day calendar, post templates. |
+| **Post scheduler (optional)** | [`social-media-management/`](./social-media-management) | A small Node tool to plan/track posts. |
+| **CI/CD** | [`.github/workflows/`](./.github/workflows) | Auto-deploy the website + validation checks. |
 
 ## Quick start
 
 ```bash
-# Clone the repository
-git clone https://github.com/Muhyadiin/Web-Social-Media-.git
-cd Web-Social-Media-
-
-# Open the landing page locally
-open landing-pages/index.html        # macOS
-xdg-open landing-pages/index.html    # Linux
-
-# Try the social media scheduler
-cd social-media-management
-node scheduler.js
+# Preview the website locally
+cd website
+python3 -m http.server 8000     # open http://localhost:8000
+# or just open website/index.html in your browser
 ```
 
-## Repository structure
+## ⚙️ Configure before launch
 
-```
-Web-Social-Media-/
-├── .github/
-│   └── workflows/
-│       └── deploy-landing-pages.yml   # CI/CD: deploy landing pages to GitHub Pages
-├── docs/
-│   ├── CONTRIBUTING.md                # How to contribute
-│   └── DEPLOYMENT.md                  # Deployment guide
-├── landing-pages/                     # Static marketing sites
-│   ├── index.html
-│   ├── css/styles.css
-│   └── js/main.js
-├── social-media-management/           # Post scheduling tooling
-│   ├── scheduler.js
-│   └── posts.sample.json
-└── README.md
-```
+Edit **`website/js/main.js`** → `SITE_CONFIG` (one place):
 
-## Branching model
+- `whatsapp` — your real WhatsApp number (digits only, incl. country code)
+- `email` — your contact email
+- `formEndpoint` — a free [Formspree](https://formspree.io) URL to receive form emails
 
-Each project lives on its own branch so work can progress independently before
-merging into `main`:
+Then set your real domain in `website/sitemap.xml`, `website/robots.txt`, and the
+`canonical`/`og:url` tags in each page. Full steps in
+[`docs/IMPLEMENTATION-PLAN.md`](./docs/IMPLEMENTATION-PLAN.md).
 
-- `main` — stable, released code
-- `landing-pages` — landing page development
-- `social-media-management` — social media tooling development
+## Deliverables (all included)
 
-See [docs/CONTRIBUTING.md](./docs/CONTRIBUTING.md) for the full workflow.
+- ✅ Complete website structure & **sitemap** — [`docs/SITEMAP.md`](./docs/SITEMAP.md)
+- ✅ **Wireframes** — [`docs/WIREFRAMES.md`](./docs/WIREFRAMES.md)
+- ✅ **UI design recommendations** — [`docs/UI-DESIGN.md`](./docs/UI-DESIGN.md)
+- ✅ **Landing page copy** — [`docs/LANDING-COPY.md`](./docs/LANDING-COPY.md)
+- ✅ **CTA strategy** — [`docs/CTA-STRATEGY.md`](./docs/CTA-STRATEGY.md)
+- ✅ **SEO keywords** — [`docs/SEO-KEYWORDS.md`](./docs/SEO-KEYWORDS.md)
+- ✅ **Social media strategy** — [`social-media-system/STRATEGY.md`](./social-media-system/STRATEGY.md)
+- ✅ **30-day content calendar** — [`social-media-system/CONTENT-CALENDAR.md`](./social-media-system/CONTENT-CALENDAR.md)
+- ✅ **Content templates** — [`social-media-system/CONTENT-TEMPLATES.md`](./social-media-system/CONTENT-TEMPLATES.md)
+- ✅ **Folder structure & full implementation plan** — [`docs/IMPLEMENTATION-PLAN.md`](./docs/IMPLEMENTATION-PLAN.md)
 
-## CI/CD
+## Services represented on the site
 
-Pushes to `main` that touch `landing-pages/` trigger the
-[deploy workflow](./.github/workflows/deploy-landing-pages.yml), which publishes
-the landing pages to **GitHub Pages**. See [docs/DEPLOYMENT.md](./docs/DEPLOYMENT.md).
+Bill of Quantities · Quantity Takeoff · Structural Design · Structural Analysis ·
+Cost Estimation · Project Planning · Construction Consulting
 
-## Working with Claude through GitHub
+## Tech
 
-This repository is wired up for [Claude Code](https://claude.com/claude-code)
-via the GitHub integration. You can:
+Semantic HTML + a CSS design system + vanilla JavaScript — **no build step**,
+instant GitHub Pages deploy, excellent Lighthouse scores. (Astro is a documented
+upgrade path if a blog CMS is needed later.)
 
-- Mention `@claude` in an issue or pull request comment to ask for changes or reviews.
-- Open a PR and let Claude review the diff and suggest fixes.
-- Start a session at [claude.ai/code](https://claude.ai/code) to work on the repo directly.
+## Deployment
 
-See [docs/CONTRIBUTING.md](./docs/CONTRIBUTING.md#working-with-claude) for details.
+Pushes to `main` that change `website/` auto-deploy to **GitHub Pages** via
+[`.github/workflows/deploy-website.yml`](./.github/workflows/deploy-website.yml).
+One-time setup: **Settings → Pages → Source → GitHub Actions**. See
+[`docs/DEPLOYMENT.md`](./docs/DEPLOYMENT.md).
 
 ## License
 
-Released under the [MIT License](./LICENSE).
+[MIT](./LICENSE)
