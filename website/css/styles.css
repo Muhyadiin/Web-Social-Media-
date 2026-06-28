@@ -309,3 +309,5 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--ink); line-height: 
    is missing it is removed (onerror) and the gradient + label show instead. */
 .work-card .thumb { position: relative; overflow: hidden; }
 .work-card .thumb .thumb-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+
+.mark img { display:block; width:24px; height:24px; }
