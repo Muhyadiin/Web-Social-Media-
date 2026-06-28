@@ -7,18 +7,18 @@
 /* ---------- Design tokens ---------- */
 :root {
   /* Brand palette */
-  --ink: #0d1b2a;          /* near-black navy — text & dark bands */
-  --navy: #15324f;         /* primary brand navy */
-  --navy-600: #1c4368;
+  --ink: #20191a;          /* near-black navy — text & dark bands */
+  --navy: #b5232e;         /* primary brand navy */
+  --navy-600: #94171f;
   --accent: #e0a82e;       /* premium gold — primary CTA / highlights */
   --accent-600: #c8911f;
-  --blue: #2b6cb0;         /* engineering blue — links */
-  --blue-600: #225a93;
+  --blue: #b5232e;         /* engineering blue — links */
+  --blue-600: #94171f;
 
   /* Neutrals */
   --bg: #ffffff;
   --bg-soft: #f5f7fa;
-  --bg-band: #0f2740;      /* dark section background */
+  --bg-band: #2a1416;      /* dark section background */
   --line: #e6eaf0;
   --text: #1b2733;
   --muted: #5b6b7d;
@@ -59,7 +59,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--ink); line-height: 
 .container { width: min(var(--max), 92%); margin-inline: auto; }
 .section { padding: clamp(3.5rem, 8vw, 6rem) 0; }
 .section-sm { padding: clamp(2.5rem, 6vw, 4rem) 0; }
-.band-dark { background: var(--bg-band); color: #d8e2ec; }
+.band-dark { background: var(--bg-band); color: #ead9d2; }
 .band-dark h1, .band-dark h2, .band-dark h3 { color: #fff; }
 .band-soft { background: var(--bg-soft); }
 .center { text-align: center; }
@@ -117,7 +117,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--ink); line-height: 
 
 /* ---------- Hero ---------- */
 .hero { position: relative; padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(3rem, 6vw, 4.5rem); background:
-  radial-gradient(900px 420px at 85% -5%, rgba(43,108,176,.12), transparent),
+  radial-gradient(900px 420px at 85% -5%, rgba(181,35,46,.14), transparent),
   radial-gradient(700px 380px at 0% 10%, rgba(224,168,46,.10), transparent); }
 .hero-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; }
 .hero h1 { font-size: clamp(2.1rem, 5vw, 3.4rem); letter-spacing: -0.025em; }
@@ -175,7 +175,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--ink); line-height: 
 /* ---------- Stats band ---------- */
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; text-align: center; }
 .stats .stat dt { font-family: var(--font-head); font-weight: 800; font-size: clamp(1.8rem, 5vw, 2.6rem); color: #fff; }
-.stats .stat dd { color: #aebfd0; font-size: .95rem; margin-top: .2rem; }
+.stats .stat dd { color: #cdb4ac; font-size: .95rem; margin-top: .2rem; }
 
 /* ---------- Process steps ---------- */
 .steps { counter-reset: step; display: grid; gap: 1.2rem; }
@@ -215,7 +215,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--ink); line-height: 
   width: 100%; padding: .8rem 1rem; border: 1.5px solid var(--line); border-radius: var(--radius-sm);
   font: inherit; color: var(--text); background: #fff;
 }
-.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(43,108,176,.12); }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--blue); box-shadow: 0 0 0 3px rgba(181,35,46,.14); }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 .form-status { min-height: 1.4rem; font-weight: 600; }
 .form-status.ok { color: #1a8a4b; }
@@ -240,7 +240,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--ink); line-height: 
 
 /* ---------- Page hero (inner pages) ---------- */
 .page-hero { padding: clamp(2.5rem, 6vw, 4rem) 0; background:
-  radial-gradient(700px 300px at 90% -20%, rgba(43,108,176,.12), transparent), var(--bg-soft); }
+  radial-gradient(700px 300px at 90% -20%, rgba(181,35,46,.14), transparent), var(--bg-soft); }
 .breadcrumb { font-size: .85rem; color: var(--muted); margin-bottom: .6rem; }
 .page-hero h1 { font-size: clamp(1.9rem, 4.5vw, 3rem); }
 .page-hero p { color: var(--muted); max-width: 44rem; margin-top: .7rem; font-size: 1.08rem; }
@@ -311,3 +311,10 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--ink); line-height: 
 .work-card .thumb .thumb-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
 
 .mark img { display:block; width:24px; height:24px; }
+
+/* ---------- Project gallery (portfolio) ---------- */
+.gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
+.gallery img { width:100%; aspect-ratio:4/3; object-fit:contain; background:#fff; border:1px solid var(--line); border-radius:12px; box-shadow:var(--shadow-sm); padding:.4rem; }
+.gallery img.wide { grid-column:span 2; aspect-ratio:16/9; }
+.proj-desc { font-size:1.02rem; line-height:1.7; }
+@media (max-width:760px){ .gallery{ grid-template-columns:1fr 1fr; } .gallery img.wide{ grid-column:span 2; } }
