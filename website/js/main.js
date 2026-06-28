@@ -1,5 +1,5 @@
 /* ==================================================================
-   Eng. Muhiadin Ali — site interactions & integrations
+   Mulki Engineering — site interactions & integrations
    ------------------------------------------------------------------
    EDIT THIS BLOCK ONCE — values propagate across every page.
    ================================================================== */
@@ -7,7 +7,7 @@ window.SITE_CONFIG = {
   // WhatsApp number in international format, digits only (no "+", spaces or dashes).
   whatsapp: "252634916263",
   // Default pre-filled WhatsApp message.
-  whatsappMessage: "Hello Eng. Muhiadin, I'd like to discuss a project (BOQ / takeoff / structural / cost estimation).",
+  whatsappMessage: "Hello Mulki Engineering, I'd like to discuss a project (BOQ / takeoff / structural / cost estimation).",
   email: "muxiyadiinali@gmail.com",
   // Formspree endpoint — form submissions are emailed to you.
   //    Leave empty ("") to fall back to opening the visitor's email client.
@@ -84,7 +84,7 @@ window.SITE_CONFIG = {
           body: data
         }).then(function (res) {
           if (res.ok) {
-            setStatus(status, "Thank you, " + name + "! Your message has been sent. I'll reply within 1 business day.", "ok");
+            setStatus(status, "Thank you, " + name + "! Your message has been sent. We'll reply within 1 business day.", "ok");
             form.reset();
           } else {
             fallbackMailto(name, email, data);
