@@ -106,6 +106,13 @@ body {
 .price-card .btn { margin-top: auto; text-align: center; }
 .badge { position: absolute; top: -12px; right: 1.2rem; background: linear-gradient(135deg, var(--primary), var(--accent)); color: #fff; font-size: 0.75rem; padding: 0.25rem 0.7rem; border-radius: 999px; }
 
+/* Testimonials */
+.testimonial { display: flex; flex-direction: column; gap: 1.2rem; background: var(--surface-2); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: var(--radius); padding: 1.8rem; }
+.testimonial blockquote { color: var(--text); font-size: 1.05rem; line-height: 1.6; }
+.testimonial figcaption { display: flex; flex-direction: column; }
+.testimonial figcaption strong { color: var(--text); }
+.testimonial figcaption span { color: var(--muted); font-size: 0.9rem; }
+
 /* CTA / contact */
 .cta { padding: 5rem 0; background:
   radial-gradient(800px 400px at 50% 120%, rgba(124, 92, 255, 0.2), transparent), var(--surface); text-align: center; }
