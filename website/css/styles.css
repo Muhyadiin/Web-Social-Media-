@@ -8,17 +8,17 @@
 :root {
   /* Brand palette */
   --ink: #20191a;          /* near-black navy — text & dark bands */
-  --navy: #b5232e;         /* primary brand navy */
-  --navy-600: #94171f;
-  --accent: #e0a82e;       /* premium gold — primary CTA / highlights */
-  --accent-600: #c8911f;
-  --blue: #b5232e;         /* engineering blue — links */
-  --blue-600: #94171f;
+  --navy: #ab2732;         /* primary brand navy */
+  --navy-600: #8e1f29;
+  --accent: #f9a823;       /* premium gold — primary CTA / highlights */
+  --accent-600: #d98a0a;
+  --blue: #ab2732;         /* engineering blue — links */
+  --blue-600: #8e1f29;
 
   /* Neutrals */
   --bg: #ffffff;
   --bg-soft: #f5f7fa;
-  --bg-band: #2a1416;      /* dark section background */
+  --bg-band: #2a1014;      /* dark section background */
   --line: #e6eaf0;
   --text: #1b2733;
   --muted: #5b6b7d;
@@ -103,10 +103,8 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--ink); line-height: 
 }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.8rem 0; }
 .brand { display: flex; align-items: center; gap: .6rem; font-family: var(--font-head); font-weight: 700; color: var(--ink); font-size: 1.1rem; }
-.brand .mark {
-  width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center;
-  background: var(--navy); color: var(--accent); font-weight: 800; font-size: 1.05rem;
-}
+.brand .mark { height: 34px; display: inline-flex; align-items: center; background: transparent; }
+.brand .mark img { height: 34px; width: auto; display: block; }
 .brand small { display: block; font-family: var(--font); font-weight: 500; font-size: .72rem; color: var(--muted); letter-spacing: .02em; }
 .nav-links { display: flex; align-items: center; gap: 1.4rem; }
 .nav-links a { color: var(--text); font-weight: 500; font-size: .96rem; }
@@ -310,7 +308,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--ink); line-height: 
 .work-card .thumb { position: relative; overflow: hidden; }
 .work-card .thumb .thumb-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
 
-.mark img { display:block; width:24px; height:24px; }
+.brand .mark img { height:34px; width:auto; display:block; }
 
 /* ---------- Project gallery (portfolio) ---------- */
 .gallery { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }
@@ -318,3 +316,5 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--ink); line-height: 
 .gallery img.wide { grid-column:span 2; aspect-ratio:16/9; }
 .proj-desc { font-size:1.02rem; line-height:1.7; }
 @media (max-width:760px){ .gallery{ grid-template-columns:1fr 1fr; } .gallery img.wide{ grid-column:span 2; } }
+
+.work-card .proj-img { width:100%; height:auto; display:block; background:#fff; }
